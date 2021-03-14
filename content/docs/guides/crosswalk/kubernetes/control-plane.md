@@ -25,6 +25,7 @@ The full code for this stack is on [GitHub](https://github.com/pulumi/kubernetes
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
+
 In order to run container workloads, you will need a Kubernetes cluster.
 While it is possible to provision and manage a cluster manually on Azure,
 their managed offering, [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/), offers an
