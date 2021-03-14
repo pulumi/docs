@@ -566,7 +566,7 @@ $ brew install --cask goland
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{< choosable os macos >}}
+{{% choosable os macos %}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -586,9 +586,9 @@ Subsequent updates can be installed in the usual way:
 $ brew upgrade pulumi
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os linux >}}
+{{% choosable os linux %}}
 
 ### Installation Script
 
@@ -601,9 +601,9 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path. When it can't automatically add `pulumi` to your path, you will be prompted to add it manually.
 See [How to permanently set $PATH on Unix](https://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux-unix) for guidance.
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os windows %}}
 
 Windows 8 and 10 are supported.
 
@@ -623,7 +623,7 @@ Subsequent updates can be installed in the usual way:
 > choco upgrade pulumi
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -633,32 +633,32 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{< choosable os macos >}}
+{{% choosable os macos %}}
 
 ```bash
 $ pulumi version
 v{{< latest-version >}}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os linux >}}
+{{% choosable os linux %}}
 
 ```bash
 $ pulumi version
 v{{< latest-version >}}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os windows %}}
 
 ```bash
 > pulumi version
 v{{< latest-version >}}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 {{< /chooser >}}
 

@@ -10,7 +10,7 @@ menu:
 
 Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, or C#. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
 
-When running an update, your Pulumi program talks to the Pulumi CLI to orchestrate the deployment. The idea of **unit tests** is to cut this communication channel and replace the engine with mocks. The mocks respond to the commands from within the same OS process and return dummy data for each call that your Pulumi program makes.
+When running an update, your Pulumi program talks to the Pulumi CLI to orchestrate the deployment. The idea of _unit tests_ is to cut this communication channel and replace the engine with mocks. The mocks respond to the commands from within the same OS process and return dummy data for each call that your Pulumi program makes.
 
 Because mocks don't execute any real work, unit tests run very fast. Also, they can be made deterministic because tests don't depend on the behavior of any external system.
 
@@ -42,7 +42,7 @@ Our starting code is loosely based on the [aws-js-webserver example](https://git
 
 {{% choosable language "typescript" %}}
 
-**index.ts**:
+index.ts:
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -67,7 +67,7 @@ export const server = new aws.ec2.Instance("web-server-www", {
 {{% /choosable %}}
 {{% choosable language "python" %}}
 
-**infra.py**:
+infra.py:
 
 ```python
 import pulumi
@@ -90,7 +90,7 @@ server = ec2.Instance('web-server-www;',
 {{% /choosable %}}
 {{% choosable language "go" %}}
 
-**main.go**:
+main.go:
 
 ```go
 package main
@@ -148,7 +148,7 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
 
-**WebserverStack.cs**:
+WebserverStack.cs:
 
 ``` csharp
 using Pulumi;
@@ -233,7 +233,8 @@ dotnet add package FluentAssertions
 Let's add the following code to mock the external calls to the Pulumi CLI.
 
 {{% choosable language "typescript" %}}
-**ec2tests.ts**
+
+ec2tests.ts:
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
@@ -255,7 +256,7 @@ pulumi.runtime.setMocks({
 
 {{% choosable language python %}}
 
-**test_ec2.py**:
+test_ec2.py:
 
 ```python
 import pulumi
@@ -272,7 +273,8 @@ pulumi.runtime.set_mocks(MyMocks())
 {{% /choosable %}}
 
 {{% choosable language go %}}
-**main_test.go**
+
+main_test.go:
 
 ```go
 import (
@@ -293,7 +295,8 @@ func (mocks) Call(token string, args resource.PropertyMap, provider string) (res
 {{% /choosable %}}
 
 {{% choosable language "csharp" %}}
-**Testing.cs**
+
+Testing.cs:
 
 ```csharp
 public static class Testing
@@ -320,7 +323,7 @@ The definition of the mocks interface is available at the [runtime API reference
 {{% choosable language "typescript" %}}
 The overall structure and scaffolding of our tests will look like any ordinary Mocha testing:
 
-**ec2tests.ts**:
+ec2tests.ts:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -353,7 +356,7 @@ describe("Infrastructure", function() {
 {{% choosable language "python" %}}
 The overall structure and scaffolding of our tests will look like any ordinary Python's unittest testing:
 
-**test_ec2.py**:
+test_ec2.py:
 
 ```python
 import unittest
@@ -376,7 +379,7 @@ class TestingWithMocks(unittest.TestCase):
 
 The overall structure and scaffolding of our tests will look like any ordinary Go test:
 
-**main_test.go**:
+main_test.go:
 
 ```go
 package main
@@ -416,7 +419,7 @@ func TestInfrastructure(t *testing.T) {
 {{% choosable language "csharp" %}}
 The overall structure and scaffolding of our tests will look like any ordinary NUnit testing:
 
-**WebserverStackTests.cs**:
+WebserverStackTests.cs:
 
 ```csharp
 using NUnit.Framework;
@@ -784,7 +787,8 @@ Total tests: 3
 Let's fix our program to comply:
 
 {{% choosable language "typescript" %}}
-**index.ts**
+
+index.ts:
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -805,7 +809,8 @@ export const server = new aws.ec2.Instance("web-server-www", {
 
 {{% /choosable %}}
 {{% choosable language "python" %}}
-**infra.py**
+
+infra.py:
 
 ```python
 import pulumi
@@ -824,7 +829,8 @@ server = ec2.Instance('web-server-www;',
 
 {{% /choosable %}}
 {{% choosable language "go" %}}
-**main.go**
+
+main.go:
 
 ```go
 package main
@@ -873,7 +879,8 @@ func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
 
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
-**WebserverStack.cs**
+
+WebserverStack.cs:
 
 ```csharp
 using Pulumi;
@@ -955,22 +962,30 @@ All the tests passed!
 ## Full Example
 
 {{% choosable language "typescript" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in TypeScript](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-ts).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "python" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in Python](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-py).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "go" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in Go](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-go).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "csharp" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in C#](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-cs).
 
 &nbsp;
+
 {{% /choosable %}}

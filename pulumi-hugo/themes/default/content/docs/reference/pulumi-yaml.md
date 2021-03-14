@@ -32,7 +32,7 @@ It contains the following required and optional attributes:
 
 - `config`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
 
-- `backend`: (optional) configuration for project state [backend]({{< relref "state#config-stack" >}}). Supports these options:
+- `backend`: (optional) configuration for project state [backend]({{< relref "/docs/intro/concepts/state" >}}). Supports these options:
     - `url`: explicitly specify backend URL like `https://pulumi.acmecorp.com`, `file:///app/data`, etc.
 
 - `template`: (optional) provides configuration settings that will be used when initializing a new stack from a project file using `pulumi new`. Currently these values are *only- used by `pulumi new`, and not by `pulumi stack init` or as default configuration for existing stacks.

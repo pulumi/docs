@@ -25,7 +25,7 @@ For instance, consider a simple S3 bucket.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -34,8 +34,8 @@ import { s3 } from "@pulumi/aws";
 const myBucket = new s3.Bucket("myBucket", { acl: "private" });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -44,8 +44,8 @@ from pulumi_aws import s3
 my_bucket = s3.Bucket("myBucket", acl="private")
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -63,8 +63,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -87,7 +87,7 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 In the above code, the S3 `Bucket` resource has a property called `acl`, where we pass in the string `private` to indicate that this is a private bucket.
@@ -95,7 +95,7 @@ In the above code, the S3 `Bucket` resource has a property called `acl`, where w
 If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is emitted as one, so you can use the following code instead.
 
 {{< chooser language "typescript,python,csharp,go" >}}
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -104,8 +104,8 @@ import { s3 } from "@pulumi/aws";
 const myBucket = new s3.Bucket("myBucket", { acl: s3.CannedAcl.Private });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -114,8 +114,8 @@ from pulumi_aws import s3
 my_bucket = s3.Bucket("myBucket", acl=s3.CannedAcl.PRIVATE)
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -133,8 +133,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -157,7 +157,7 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 ## IDE Superpowers
@@ -166,26 +166,26 @@ Enum properties provide discoverable and normalized constants that can be used i
 
 Using the provided constants, you can avoid referring back to the documentation to remember the valid values and save precious moments in the development cycle that would be lost to debugging errors caused by typos.
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ![ENUM_TYPESCRIPT](ts-enum.gif)
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ![ENUM_PYTHON](python-enum.gif)
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ![ENUM_CSHARP](csharp-enum.gif)
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ![ENUM_GO](go-enum.gif)
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 ## Optimized for flexibility
 
@@ -198,7 +198,7 @@ A property is a "strict" enum when the input value **must** be one of the enumer
 We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure-Native]({{< relref "/blog/full-coverage-of-azure-resources-with-azure-native" >}}) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
 {{< chooser language "typescript,python,csharp,go" >}}
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 export class StorageAccount extends pulumi.CustomResource {
@@ -211,8 +211,8 @@ export interface StorageAccountArgs {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 class StorageAccount(pulumi.CustomResource):
@@ -223,8 +223,8 @@ class StorageAccount(pulumi.CustomResource):
         ...
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 namespace Pulumi.AzureNative.Storage
@@ -246,8 +246,8 @@ namespace Pulumi.AzureNative.Storage
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 func NewStorageAccount(ctx *pulumi.Context,
@@ -261,18 +261,18 @@ type StorageAccountArgs struct {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
-{{% notes type="info" %}}
+{{< notes type="info" >}}
 When using TypeScript, "strict" enums will accept both the constant (`AccessTier.Cool`) or the literal string (`"Cool"`). If there is an accidental spelling error in the literal, you are *immediately* alerted to the issue rather than having to wait until runtime.
-{{% /notes %}}
+{{< /notes >}}
 
 ![ENUM_ERROR_TYPESCRIPT](ts-enum-spelling.png)
 
-{{< /choosable >}}
+{{% /choosable %}}
 
 ### "Relaxed" enums
 
@@ -281,7 +281,7 @@ When a property is a "relaxed" enum, the property type is specified as the `Unio
 In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
 {{< chooser language "typescript,python,csharp,go" >}}
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 export class Bucket extends pulumi.CustomResource {
@@ -294,8 +294,8 @@ export interface BucketArgs {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 class Bucket(pulumi.CustomResource):
@@ -307,8 +307,8 @@ class Bucket(pulumi.CustomResource):
 
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 namespace Pulumi.Aws.S3
@@ -330,8 +330,8 @@ namespace Pulumi.Aws.S3
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 func NewBucket(ctx *pulumi.Context,
@@ -348,7 +348,7 @@ type BucketArgs struct {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 ## Try them out!

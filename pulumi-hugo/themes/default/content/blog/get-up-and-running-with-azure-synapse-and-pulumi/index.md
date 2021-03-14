@@ -20,8 +20,8 @@ The alternative is to use an infrastructure as code tool to automate building an
 <!--more-->
 
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
-{{% md %}}
-**Azure Synapse Quick Start**
+
+##### Azure Synapse Quick Start
 
 Ready to get up and running quickly right away?
 
@@ -30,7 +30,7 @@ Ready to get up and running quickly right away?
 3. Go to `https://web.azuresynapse.net` and sign in to your new workspace.
 
 For additional information on how provisioning Azure Synapse with infrastructure as code, please read on.
-{{% /md %}}
+
 </div>
 
 ## Azure Synapse Components

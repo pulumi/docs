@@ -62,12 +62,10 @@ const key = new aws.kms.Key("stack-encryption-key", {
         description: "KMS key for encrypting Pulumi secret values"
 });
 
-
 // Create an alias to the key
 const alias = new aws.kms.Alias("alias/stack-encryption-key", {
     targetKeyId: key.keyId
 });
-
 
 // Export the arns
 exports.keyArn = key.arn;

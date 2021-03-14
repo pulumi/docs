@@ -59,7 +59,7 @@ The next generation Azure provider is available in preview today for all Pulumi 
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as resources from "@pulumi/azure-nextgen/resources/latest";
@@ -82,8 +82,9 @@ const storageAccount = new storage.StorageAccount("sa", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+
+{{% choosable language python %}}
 
 ```python
 from pulumi_azure_nextgen.storage import latest as storage
@@ -104,8 +105,9 @@ account = storage.StorageAccount('sa',
     kind='StorageV2')
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -139,8 +141,9 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+
+{{% choosable language go %}}
 
 ```go
 package main
@@ -177,8 +180,9 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
-{{< /chooser >}}
+{{% /choosable %}}
+
+{{% /chooser %}}
 
 API documentation is available at [Azure NextGen API Reference](/docs/reference/pkg/azure-nextgen) and includes more than 1,000 resource examples.
 
@@ -211,35 +215,35 @@ New Pulumi templates are available for the new `azure-nextgen` provider:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```sh
 $ pulumi new azure-nextgen-typescript
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```sh
 $ pulumi new azure-nextgen-python
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```sh
 $ pulumi new azure-nextgen-csharp
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```sh
 $ pulumi new azure-nextgen-go
 ```
 
-{{< /choosable >}}
-{{< /chooser >}}
+{{% /choosable %}}
+{{% /chooser %}}
 
 Several larger examples are available in the Pulumi Examples repo:
 

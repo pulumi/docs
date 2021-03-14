@@ -8,7 +8,7 @@ authors:
 tags:
   - azure
 ---
- 
+
 Last September, we [announced the beta release of Pulumi Azure NextGen]({{< relref "/blog/announcing-nextgen-azure-provider" >}}): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.
 
 Today, we’re excited to announce that this new provider is now the default way to manage Azure resources with Pulumi. We’re also excited to announce its final name: the native Azure provider for Pulumi, or “Azure-Native” for short. You can get started with the new provider using our newly-updated [getting started guide]({{< relref "/docs/get-started/azure" >}}).
@@ -35,7 +35,7 @@ Every resource is now available in the top-level (versionless) module of its res
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as azure from "@pulumi/azure-native";
@@ -51,8 +51,8 @@ const storageAccount = new azure.storage.StorageAccount("sa", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi_azure_native as azure
@@ -67,8 +67,8 @@ account = azure.storage.StorageAccount('sa',
    kind=azure.storage.Kind.STORAGE_V2)
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -95,8 +95,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -127,7 +127,7 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 The top-level resources will use stable API versions and take no arbitrary breaking changes within a given major version of the package once we reach general availability; during the preview, breaking changes may appear in `0.x` minor versions.
@@ -140,23 +140,23 @@ The original preview of the native Azure provider (then called “Azure NextGen�
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as azure from "@pulumi/azure-native";
 const resourceGroup = new azure.resources.ResourceGroup("rg");
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi_azure_native as azure
 resource_group = azure.resources.ResourceGroup('rg')
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -170,8 +170,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -189,7 +189,7 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 Pass an explicit value to the `resourceGroupName` property if you want to control the resource's exact name.
@@ -241,34 +241,34 @@ From now on, the `azure-*` templates will reference the native Azure provider. I
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```sh
 $ pulumi new azure-typescript
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```sh
 $ pulumi new azure-python
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```sh
 $ pulumi new azure-csharp
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```sh
 $ pulumi new azure-go
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 Several more extensive examples are available in the Pulumi Examples repo:
